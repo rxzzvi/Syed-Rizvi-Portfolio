@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syed Rizvi | AI Content & IT Support</title>
+<meta name="description" content="Computer Science graduate (First Class Honours) in Dubai working across AI content, IT support, business development and customer service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2438ff;--ink:#080b1e;--ink2:#0e1230;--line:#242a55;--text:#e9ebff;--mute:#9ba1d6;--violet:#8b93ff;--orange:#ff5a1f;--white:#fff;
+--sans:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);background:var(--ink);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);font-size:.78rem;color:var(--violet)}
+h1,h2,h3{letter-spacing:-.045em;line-height:.95;font-weight:700}
+
+/* nav */
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:2px;padding:6px;border-radius:999px;background:rgba(235,237,255,.92);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.25);max-width:calc(100vw - 24px);overflow-x:auto}
+.nav a{padding:8px 15px;border-radius:999px;font-size:.88rem;font-weight:500;color:#10143a;white-space:nowrap}
+.nav a:hover{background:rgba(36,56,255,.12)}
+.nav a.on{background:var(--violet);color:#fff}
+.nav a.cta{background:var(--orange);color:#fff}
+.logo{position:fixed;top:20px;left:24px;z-index:20;padding:9px 18px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;letter-spacing:-.03em;border:1px solid var(--line)}
+@media(max-width:1180px){.logo{display:none}}
+
+/* hero */
+.hero{background:var(--blue);min-height:100vh;padding:130px 0 60px;position:relative;overflow:hidden;
+background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:64px 64px}
+.hero .wrap{position:relative}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.pill{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:6px 16px;font-size:.88rem;font-weight:500}
+.clock{position:absolute;right:24px;top:0;text-align:right}
+.clock b{display:block;font-family:var(--mono);font-weight:500;font-size:clamp(1.6rem,4vw,3rem);letter-spacing:-.03em;color:#fff;line-height:1.1}
+.clock span{font-family:var(--mono);font-size:.78rem;color:#dfe2ff}
+.big{font-size:clamp(6.5rem,27vw,23rem);color:#fff;margin:40px 0 0 -.04em;letter-spacing:-.07em}
+.role{font-size:clamp(1.3rem,2.6vw,2rem);font-weight:700;letter-spacing:-.03em;color:#fff;margin-top:18px;min-height:2.4rem}
+.role i{display:inline-block;width:3px;height:1.1em;background:var(--orange);margin-left:6px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{max-width:560px;font-size:1.12rem;color:#eef0ff;margin-top:14px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:12px 22px;font-weight:700;font-size:.95rem;color:#fff;transition:.2s}
+.btn:hover{background:rgba(255,255,255,.14)}
+.btn.solid{background:#fff;color:var(--blue);border-color:#fff}
+.btn.solid:hover{background:#e6e9ff}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.4);margin-top:64px}
+.stat{padding:22px 20px 6px 0;border-right:1px solid rgba(255,255,255,.3)}
+.stat+.stat{padding-left:22px}.stat:last-child{border:0}
+.stat small{font-family:var(--mono);font-size:.78rem;color:#dfe2ff}
+.stat b{display:block;font-size:clamp(2.4rem,6vw,4.6rem);letter-spacing:-.06em;line-height:1.05;color:#fff}
+.stat em{font-style:normal;font-size:.85rem;color:#dfe2ff}
+.now{display:flex;gap:10px 28px;flex-wrap:wrap;align-items:center;border-top:1px solid rgba(255,255,255,.4);margin-top:28px;padding-top:18px;font-size:.95rem;color:#fff}
+.dot{width:10px;height:10px;border-radius:50%;background:#3dffb0;display:inline-block;margin-right:8px}
+
+/* sections */
+section.s{padding:120px 0 80px;border-bottom:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.head h2{font-size:clamp(3.4rem,10vw,8.5rem);color:#eef0ff}
+.head p{max-width:300px;color:var(--mute)}
+.row{display:grid;grid-template-columns:240px 1fr;gap:30px;padding:34px 0;border-top:1px solid var(--line)}
+.row h3{font-size:clamp(1.8rem,4vw,2.9rem);margin-bottom:6px}
+.row .sub{color:var(--mute);margin-bottom:12px}
+.row ul{list-style:none;color:var(--mute);max-width:700px}
+.row li{padding-left:16px;position:relative;margin:5px 0}
+.row li:before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--violet)}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 12px;font-size:.78rem;margin:0 6px 6px 0;color:var(--text)}
+.about{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line)}
+.about div{padding:26px 24px 10px 0;border-right:1px solid var(--line)}
+.about div+div{padding-left:24px}.about div:last-child{border:0}
+.about h3{font-size:1.9rem;margin:6px 0 12px}.about p{color:var(--mute)}
+.intro{font-size:clamp(2rem,5vw,4rem);margin-bottom:46px;max-width:960px}
+
+/* projects */
+.tk{display:grid;grid-template-columns:150px 1fr 280px 110px;gap:24px;padding:30px 0;border-top:1px solid var(--line);align-items:start}
+.tk h3{font-size:clamp(1.7rem,3.4vw,2.6rem);margin:4px 0 8px}
+.tk p{color:var(--mute);max-width:560px}
+.tk .go{font-weight:700;text-align:right}.tk .go:hover{color:var(--violet)}
+
+/* skills */
+.sk{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.sk div{padding:26px 0;border-top:1px solid var(--line)}
+.sk h3{font-size:1.7rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.9rem}
+.tech{background:#e9ebff;color:#10143a;margin-top:70px;padding:30px 0;overflow:hidden}
+.tech .track{display:flex;gap:44px;width:max-content;animation:run 32s linear infinite;font-size:1.6rem;font-weight:700;letter-spacing:-.03em}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* credentials */
+.edu{display:grid;grid-template-columns:minmax(260px,1fr) 1.4fr;gap:40px;align-items:center;padding:34px 0;border-top:1px solid var(--line)}
+.edu .g{font-size:clamp(4.5rem,13vw,10rem);color:var(--violet);letter-spacing:-.07em;line-height:.9;font-weight:700}
+.edu h3{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:10px}.edu p{color:var(--mute)}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.cert{padding:22px 22px 24px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.cert:nth-child(3n+1){padding-left:0}.cert:not(:nth-child(3n+1)){padding-left:22px}.cert:nth-child(3n){border-right:0}
+.cert h3{font-size:1.2rem;line-height:1.15;margin:8px 0 6px;letter-spacing:-.03em}
+.cert p{color:var(--mute);font-size:.9rem}
+
+/* contact */
+.contact{background:var(--blue);padding:120px 0 90px}
+.contact h2{font-size:clamp(4rem,15vw,12rem);color:#fff;letter-spacing:-.065em;margin:10px 0 24px}
+.contact .lede{margin-bottom:50px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid rgba(255,255,255,.4);padding:22px 0;color:#fff}
+.links a:last-child{border-bottom:1px solid rgba(255,255,255,.4)}
+.links b{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.045em}
+.links small{display:block;font-family:var(--mono);font-size:.8rem;color:#dfe2ff}
+.links span{border:1px solid #fff;border-radius:999px;padding:9px 20px;font-weight:700;white-space:nowrap}
+.links a:hover span{background:#fff;color:var(--blue)}
+footer{background:#e9ebff;color:#10143a;padding:28px 0;font-family:var(--mono);font-size:.8rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:860px){
+.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(3){padding-left:0}
+.clock{position:static;text-align:left;margin:14px 0 0}
+.row,.edu{grid-template-columns:1fr;gap:12px}
+.about,.sk,.certs{grid-template-columns:1fr}
+.about div,.about div+div{border:0;padding:20px 0;border-top:1px solid var(--line)}
+.cert,.cert:not(:nth-child(3n+1)){padding-left:0;border-right:0}
+.tk{grid-template-columns:1fr;gap:8px}.tk .go{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<a class="logo" href="#top">syed_</a>
+<nav class="nav" aria-label="Sections">
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a class="cta" href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+<div class="wrap">
+<div class="clock"><span>Local time · Dubai</span><b id="t">--:--:--</b><span id="d"></span></div>
+<div class="pills"><span class="pill">Dubai, UAE</span><span class="pill">Open to internships &amp; entry-level roles</span></div>
+<h1 class="big">Syed</h1>
+<div class="role"><span id="typed"></span><i></i></div>
+<p class="lede">Computer Science graduate (First Class Honours) working across AI content, IT support, business development and customer service. I turn tools and data into work that teams can use straight away.</p>
+<div class="btns">
+<a class="btn solid" href="#projects">View projects</a>
+<a class="btn" href="#contact">Get in touch</a>
+<a class="btn" href="https://www.linkedin.com/in/syedrizxvi" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a class="btn" href="https://github.com/rxzzvi" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+<div class="stats">
+<div class="stat"><small>Degree</small><b>1st</b><em>BSc Computer Science, GPA 3.7/4.0</em></div>
+<div class="stat"><small>Roles</small><b>4</b><em>Internships and seasonal work</em></div>
+<div class="stat"><small>AI assets</small><b>17,000+</b><em>Product SKUs visualised</em></div>
+<div class="stat"><small>Certificates</small><b>11+</b><em>Cloud, Python, AI, business</em></div>
+</div>
+<div class="now"><span><i class="dot"></i><b>Currently</b></span><span>Business Development Analyst Intern at Orbis Cloud</span><span>IT, cloud &amp; cybersecurity services · UAE market</span></div>
+</div>
+</header>
+
+<section class="s" id="about"><div class="wrap">
+<span class="mono">Profile_</span>
+<h2 class="intro" style="margin-top:10px">Computer Science graduate working across AI content, IT and customer-facing roles.</h2>
+<div class="about">
+<div><span class="mono">what I do</span><h3>Keep work moving</h3><p>I support teams with technology and content: IT support, AI-generated product visuals, prospect research and customer service, so daily operations run smoothly.</p></div>
+<div><span class="mono">how I work</span><h3>Build, track, hand off</h3><p>I break a problem down, build a practical fix, and keep clear tracking in Excel workflows and KPI dashboards so the next person can pick it up straight away.</p></div>
+<div><span class="mono">where I’m heading</span><h3>Cloud, security &amp; AI</h3><p>I’m growing towards cloud, cybersecurity and AI-driven automation, combining my degree with hands-on experience in IT services, marketing and retail.</p></div>
+</div>
+</div></section>
+
+<section class="s" id="experience"><div class="wrap">
+<span class="mono">Experience_</span>
+<div class="head"><h2>Where I’ve Worked</h2><p>Business development, AI content, retail and events across Dubai.</p></div>
+<div class="row"><div><span class="mono">Aug 2026 – Present</span></div><div>
+<h3>Business Development Analyst</h3><div class="sub">Orbis Cloud · Dubai, UAE · Remote</div>
+<span class="tag">Internship</span><span class="tag">Business development</span><span class="tag">Lead generation</span>
+<ul><li>Support business development for Orbis Cloud’s IT, cloud and cybersecurity services across UAE markets</li><li>Run prospect research, B2B outreach and lead generation, and coordinate meetings with prospective clients</li><li>Support opportunities across Microsoft 365, Azure, cloud migration, cybersecurity and managed IT services</li></ul></div></div>
+<div class="row"><div><span class="mono">Sep 2026</span></div><div>
+<h3>Customer Service Associate</h3><div class="sub">Threads Uniform · Dubai, UAE · On-site</div>
+<span class="tag">Seasonal</span><span class="tag">EPOS</span>
+<ul><li>Handled customer transactions on EPOS systems during a high-footfall retail period</li><li>Helped customers with product enquiries and supported stock replenishment and back-store operations</li></ul></div></div>
+<div class="row"><div><span class="mono">Sep 2025 – Feb 2026</span></div><div>
+<h3>AI &amp; Motion Content</h3><div class="sub">Kibsons International LLC · Marketing Department · Dubai, UAE · Hybrid</div>
+<span class="tag">Internship</span><span class="tag">Sora AI</span><span class="tag">Kling</span>
+<ul><li>Produced AI-generated product visuals and short-form motion content for a 17,000+ SKU e-commerce catalogue</li><li>Built and quality-checked Excel tracking workflows for a team of interns, improving handoff consistency</li><li>Aligned visual output with brand guidelines and campaign requirements with marketing stakeholders</li></ul></div></div>
+<div class="row"><div><span class="mono">Feb 2024</span></div><div>
+<h3>Event Assistant</h3><div class="sub">Emirates Airline Festival of Literature · Dubai, UAE</div>
+<span class="tag">Seasonal</span>
+<ul><li>Managed ticket scanning and entry logistics for 200+ attendees</li><li>Supported A/V setup and on-site troubleshooting so live sessions ran without interruption</li></ul></div></div>
+</div></section>
+
+<section class="s" id="projects"><div class="wrap">
+<span class="mono">Projects_</span>
+<div class="head"><h2>Selected Projects</h2><p>Computer vision, data and web builds from my degree and beyond.</p></div>
+<div class="tk"><span class="mono">#AI-01<br>Computer vision</span><div><h3>Intelligent Attendance System</h3><p>Real-time facial recognition that replaces manual roll-call, recognising each person in under a second.</p></div><div><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Tkinter</span></div><a class="go" href="https://github.com/rxzzvi/Smart-Attendance-System" target="_blank" rel="noopener">View repo ↗</a></div>
+<div class="tk"><span class="mono">#AI-02<br>Computer vision</span><div><h3>Live Object Detection with Voice Feedback</h3><p>Multithreaded detection with instant text-to-speech and sub-100 ms webcam inference, built for accessibility.</p></div><div><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Pyttsx3</span></div><a class="go" href="https://github.com/rxzzvi/Live-Object-Detection-Voice-Feedback" target="_blank" rel="noopener">View repo ↗</a></div>
+<div class="tk"><span class="mono">#DATA-01<br>Analytics</span><div><h3>KPI Analytics Dashboard</h3><p>Interactive dashboards that surface key performance metrics so stakeholders can make data-driven decisions.</p></div><div><span class="tag">Tableau</span><span class="tag">Google Data Studio</span></div><span class="go mono">&nbsp;</span></div>
+<div class="tk"><span class="mono">#DATA-02<br>Analytics</span><div><h3>Wine Sales Data Analysis</h3><p>Exploratory analysis of wine sales data.</p></div><div><span class="tag">Data analysis</span></div><a class="go" href="https://github.com/rxzzvi/Data-Analysis" target="_blank" rel="noopener">View repo ↗</a></div>
+<div class="tk"><span class="mono">#WEB-01<br>Web</span><div><h3>AI Chatbot</h3><p>A ChatGPT-style chatbot interface built for the browser.</p></div><div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><a class="go" href="https://github.com/rxzzvi/Artificial-Intelligence-ChatBot" target="_blank" rel="noopener">View repo ↗</a></div>
+<div class="tk"><span class="mono">#WEB-02<br>Web</span><div><h3>E-commerce Website</h3><p>A shopping site with a PHP back end.</p></div><div><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span></div><a class="go" href="https://github.com/rxzzvi/E-commerce-Website" target="_blank" rel="noopener">View repo ↗</a></div>
+</div></section>
+
+<section class="s" id="skills" style="padding-bottom:0;border-bottom:0"><div class="wrap">
+<span class="mono">Skills_</span>
+<div class="head"><h2>Toolbox</h2><p>Grouped by the kind of work I use them for.</p></div>
+<div class="sk">
+<div><h3>AI &amp; Generative AI</h3><div class="chips"><span>Sora AI</span><span>Kling</span><span>Google Flow AI</span><span>Higgsfield AI</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>TensorFlow</span><span>YOLOv8</span><span>OpenCV</span></div></div>
+<div><h3>Development</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>HTML/CSS</span><span>C++</span><span>PHP</span><span>SQL</span><span>Flask</span><span>Django</span><span>Tkinter</span></div></div>
+<div><h3>Business Development</h3><div class="chips"><span>Lead generation</span><span>Prospect research</span><span>B2B outreach</span><span>Client communication</span></div></div>
+<div><h3>Data &amp; Social Media</h3><div class="chips"><span>Tableau</span><span>Google Data Studio</span><span>Excel</span><span>KPI dashboards</span><span>Canva</span><span>Content scheduling</span><span>Brand alignment</span></div></div>
+<div><h3>Professional</h3><div class="chips"><span>Leadership</span><span>Communication</span><span>Event coordination</span><span>Time management</span><span>Customer service</span></div></div>
+</div></div>
+<div class="tech"><div class="track" aria-hidden="true"><span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>TensorFlow</span><span>Sora AI</span><span>Kling</span><span>Tableau</span><span>Excel</span><span>Flask</span><span>Django</span><span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>TensorFlow</span><span>Sora AI</span><span>Kling</span><span>Tableau</span><span>Excel</span><span>Flask</span><span>Django</span></div></div>
+</section>
+
+<section class="s" id="credentials"><div class="wrap">
+<span class="mono">Credentials_</span>
+<div class="head"><h2>Education &amp; Certifications</h2></div>
+<div class="edu"><div class="g">1st</div><div><span class="mono">education</span><h3>BSc (Hons) Computer Science, First Class Honours</h3><p>Liverpool John Moores University, delivered at Westford University College, Sharjah. Oct 2022 – Jul 2025 · GPA 3.7/4.0</p><p style="margin-top:10px">Also: BTEC Level 5 Higher National Diploma, Pearson (Aug 2024).</p></div></div>
+<div class="certs">
+<div class="cert"><span class="mono">Manipal Institute of Technology · May 2025</span><h3>International Student Research Confluence 2025</h3></div>
+<div class="cert"><span class="mono">Mohammed Bin Rashid Space Centre · Apr 2025</span><h3>ISPRC</h3></div>
+<div class="cert"><span class="mono">UAE AI &amp; IoT Challenge · Aug 2024</span><h3>UAE IoT &amp; AI Bootcamp</h3><p>Certificate of attendance</p></div>
+<div class="cert"><span class="mono">Westford Global Education · Apr 2024</span><h3>Python Crash Course</h3></div>
+<div class="cert"><span class="mono">Emirates · Mar 2024</span><h3>Certificate of Recognition</h3></div>
+<div class="cert"><span class="mono">Vinsys · May 2023</span><h3>AI Empowering Future Innovations</h3></div>
+<div class="cert"><span class="mono">Westford Global Education · Jun 2024</span><h3>Employability &amp; Professional Skills</h3></div>
+<div class="cert"><span class="mono">Westford Global Education · Jun 2024</span><h3>Student to Employee Transition</h3></div>
+<div class="cert"><span class="mono">Westford Global Education · Nov 2022</span><h3>Youth Business Leadership Program</h3></div>
+</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<span class="mono" style="color:#dfe2ff">Contact_</span>
+<h2>Let’s Talk</h2>
+<p class="lede">Interested in IT support, AI content, business development or customer-facing roles? I’d like to hear from you.</p>
+<div class="links">
+<a href="mailto:syedrizvi062005@gmail.com"><div><b>Email</b><small>syedrizvi062005@gmail.com</small></div><span>Write ↗</span></a>
+<a href="https://www.linkedin.com/in/syedrizxvi" target="_blank" rel="noopener"><div><b>LinkedIn</b><small>linkedin.com/in/syedrizxvi</small></div><span>Open ↗</span></a>
+<a href="https://github.com/rxzzvi" target="_blank" rel="noopener"><div><b>GitHub</b><small>github.com/rxzzvi</small></div><span>Open ↗</span></a>
+</div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Syed Rizvi</span><a href="#top">Back to top ↑</a></div></footer>
+
+<script>
+(function(){
+var phrases=["AI Content & Automation","IT Support","Business Development","Computer Vision & GenAI"],p=0,c=0,del=false,el=document.getElementById("typed");
+function tick(){var s=phrases[p];el.textContent=s.slice(0,c);
+if(!del&&c===s.length){del=true;return setTimeout(tick,1400)}
+if(del&&c===0){del=false;p=(p+1)%phrases.length}
+c+=del?-1:1;setTimeout(tick,del?35:70)}
+if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=phrases[0]}else{tick()}
+function clock(){var n=new Date();
+document.getElementById("t").textContent=n.toLocaleTimeString("en-GB",{timeZone:"Asia/Dubai"});
+document.getElementById("d").textContent=n.toLocaleDateString("en-GB",{timeZone:"Asia/Dubai",weekday:"long",day:"numeric",month:"long"})}
+clock();setInterval(clock,1000);
+var links=document.querySelectorAll(".nav a:not(.cta)");
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+["about","experience","projects","skills","credentials"].forEach(function(id){io.observe(document.getElementById(id))});
+})();
+</script>
+</body>
+</html>
